@@ -4,13 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ICT373-Assignment1-LiyanaAfiqahBinteJazmi-35849414</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- External JavaScript -->
+    <script src="validation.js" defer></script>
 </head>
 
 <body>
-    <h1>User Information Form</h1>
-    <form action="action=" http://www.it.murdoch.edu.au/cgi-bin/reply1.pl" method="GET" onsubmit="return validateForm()"">
-        
-    </form>
+
+    <div class="form-container">
+
+        <h1>User Information Form</h1>
+        <p class="form-description">
+            Please complete all fields below. All fields are mandatory.
+        </p>
+
+        <form action="http://www.it.murdoch.edu.au/cgi-bin/reply1.pl" method="GET" onsubmit="return validateForm()">
+
+            <!-- Name -->
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="first_name" placeholder="John" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="last_name" placeholder="Doe" required>
+                </div>
+
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label for="phone-number">Phone Number *</label>
+                <input type="text" id="phone-number" name="phone_number" placeholder="+6591234567" required>
+                <small>
+                    Enter 8–15 digits. An optional + prefix is allowed.
+                </small>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="form-group">
+                <label for="dob">Date of Birth *</label>
+                <input type="text" id="dob" name="dob" placeholder="DD/MM/YYYY" maxlength="10" required>
+                <small>Format: DD/MM/YYYY</small>
+            </div>
+
+            <!-- Favourite Pastime -->
+            <fieldset class="form-group pastime-group">
+
+                <legend>Favourite Pastime *</legend>
+
+                <div class="radio-options">
+
+                    <label>
+                        <input type="radio" name="pastime" value="Surfing the Web" required>
+                        Surfing the Web
+                    </label>
+
+                    <label>
+                        <input type="radio" name="pastime" value="Playing Sport">
+                        Playing Sport
+                    </label>
+
+                    <label>
+                        <input type="radio" name="pastime" value="Listening to Music">
+                        Listening to Music
+                    </label>
+
+                    <label>
+                        <input type="radio" name="pastime" value="Watching TV">
+                        Watching TV
+                    </label>
+
+                    <label>
+                        <input type="radio" name="pastime" value="Playing Games">
+                        Playing Games
+                    </label>
+
+                    <label>
+                        <input type="radio" name="pastime" value="Community Service">
+                        Community Service
+                    </label>
+
+                    <label>
+                        <input type="radio" name="pastime" value="Daydreaming">
+                        Daydreaming
+                    </label>
+
+                    <label>
+                        <input type="radio" name="pastime" value="Reading">
+                        Reading
+                    </label>
+
+                    <label>
+                        <input type="radio" name="pastime" value="Meditation">
+                        Meditation
+                    </label>
+
+                </div>
+
+            </fieldset>
+
+            <!-- Submit -->
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </div>
+
 </body>
+
 </html>
