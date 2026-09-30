@@ -1,0 +1,181 @@
+/* ICT373 Assignment 1 - Question 1 */
+/* External Stylesheet */
+
+/* General Page Styling */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.5;
+}
+
+/* Main Form Container */
+
+.form-container {
+    background-color: #ffffff;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 35px 40px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+
+h1 {
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #243b53;
+}
+
+.form-description {
+    font-size: 14px;
+    color: #66788a;
+    margin-bottom: 30px;
+}
+
+/* Form Layout */
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: 0;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+/* Labels */
+
+.form-group>label,
+.pastime-group legend {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #334e68;
+}
+
+/* Text Inputs */
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #cbd2d9;
+    border-radius: 5px;
+    background-color: #ffffff;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #3273dc;
+    box-shadow: 0 0 0 2px rgba(50, 115, 220, 0.1);
+}
+
+/* Input Instructions */
+
+small {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #829ab1;
+}
+
+/* Pastime Radio Buttons */
+
+.pastime-group {
+    border: none;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 0;
+}
+
+.pastime-group legend {
+    padding: 0;
+    margin-bottom: 12px;
+}
+
+.radio-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.radio-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    accent-color: #3273dc;
+    cursor: pointer;
+    margin: 0;
+}
+
+/* Submit Button */
+
+button[type="submit"] {
+    width: 100%;
+    padding: 13px;
+    margin-top: 15px;
+    background-color: #3273dc;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #245bb5;
+}
+
+button[type="submit"]:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+/* Smaller Screens */
+
+@media (max-width: 500px) {
+
+    .form-container {
+        padding: 25px 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .radio-options {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
