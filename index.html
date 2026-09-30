@@ -1,3 +1,9 @@
+<!-- 
+    ICT373 Assignment 1 - Question 1 
+    Liyana Afiqah Binte Jazmi - 35849414
+    User Information Form Validation 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +17,7 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- External JavaScript -->
-    <script src="validation.js" defer></script>
+    <script type="module" src="validation.js"></script>
 </head>
 
 <body>
@@ -23,21 +29,15 @@
             Please complete all fields below. All fields are mandatory.
         </p>
 
-        <form action="http://www.it.murdoch.edu.au/cgi-bin/reply1.pl" method="GET" onsubmit="return validateForm()">
+        <form id="user-form" action="http://www.it.murdoch.edu.au/cgi-bin/reply1.pl" method="GET">
 
             <!-- Name -->
             <div class="form-row">
 
                 <div class="form-group">
-                    <label for="first-name">First Name *</label>
-                    <input type="text" id="first-name" name="first_name" placeholder="John" required>
+                    <label for="name">Name: *</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
                 </div>
-
-                <div class="form-group">
-                    <label for="last-name">Last Name *</label>
-                    <input type="text" id="last-name" name="last_name" placeholder="Doe" required>
-                </div>
-
             </div>
 
             <!-- Phone Number -->
