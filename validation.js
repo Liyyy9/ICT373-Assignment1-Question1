@@ -1,8 +1,6 @@
 // ICT373 Assignment 1 - Question 1
 // Liyana Afiqah Binte Jazmi - 35849414
 // User Information Form Validation
-import { CONFIG } from './config.js';
-
 function validateName(name) {
     const trimmedName = name.trim();
 
@@ -131,12 +129,7 @@ function validateBirthDate(dob) {
 async function getCurrentDate() {
 
     const response = await fetch(
-        'https://api.data.gov.sg/v1/transport/traffic-images',
-        {
-            headers: {
-                'x-api-key': CONFIG.API_KEY
-            }
-        }
+        'https://api.data.gov.sg/v1/transport/traffic-images'
     );
 
     // Check whether the HTTP request succeeded.
